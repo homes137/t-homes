@@ -1,26 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header class="header">
+    <div class="navbar-top-right">
+      <TrafficLights />
+    </div>
+  </header>
+  <main>
+    <LandingPage />
+  </main>
+  <footer class="footer"></footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TrafficLights from "./components/TrafficLights.vue";
+import LandingPage from "./components/LandingPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TrafficLights,
+    LandingPage,
+  },
+};
 </script>
 
 <style>
+* {
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #54968d;
+}
+.header {
+  height: 10vh;
+  background-color: #2c3e50;
+}
+.footer {
+  height: 10vh;
+  background-color: #2c3e50;
+}
+.navbar-top-right {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 </style>
